@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="alien-style.css">
+</head>
+
+<body>
+  <section class="main">
+
+<div class="container">
+  <div>
+    <h1>Калькулятор обменного курса</h1>
+    <p> Выберите валюту и сумму, чтобы узнать обменный курс</p>
+  </div>
+  <div class="currency">
+    <input type="number" id="amount-one" placeholder="0" value="1">
+
+      <select id="currency-one">
+        <option value="EUR" selected>Евро</option>
+        <option value="USD">Доллар США</option>
+        <option value="RUB">Рубль</option>
+        <option value="AED">Дирхам ОАЭ</option>
+          <option value="AMD">Драм Армения</option>
+          <option value="ARS">Песо Аргентина</option>
+          <option value="AUD">Австралийский доллар</option>
+          <option value="BGN">Лев Болгария</option>
+          <option value="BRL">Реал Бразилия</option>
+          <option value="BSD">Багамский доллар</option>
+          <option value="CAD">Доллар Канада</option>
+          <option value="CHF">Швейцарский франк</option>
+          <option value="CLP">Песо Чили</option>
+          <option value="CNY">Китайский юань</option>
+          <option value="COP">Песо Колумбия</option>
+          <option value="CZK">Крона Чехия</option>
+          <option value="DKK">Датская крона</option>
+          <option value="DOP">Песо Доминиканская республика</option>
+          <option value="EGP">Египетский фунт</option>
+          <option value="FJD">Доллар Фиджи</option>
+          <option value="GBP">Фунт стерлингов</option>
+          <option value="HKD">Гонконгский доллар</option>
+          <option value="HRK">Куна Хорватия</option>
+          <option value="HUF">Венгерский форин</option>
+          <option value="IDR">Рупия Индонезия</option>
+          <option value="ILS">Шекель новый Израиль</option>
+          <option value="INR">Индийская рупия</option>
+          <option value="ISK">Крона Исландия</option>
+          <option value="JPY">Японская иена</option>
+          <option value="KRW">Северно Корейская вона</option>
+          <option value="KZT">Казахская тенге</option>
+          <option value="MXN">Песо Мексика</option>
+          <option value="MYR">Ринггит Малайзия</option>
+          <option value="NOK">Крона Норвегия</option>
+          <option value="NZD">Доллар Новая Зеландия</option>
+          <option value="PAB">Бальбоа Панама</option>
+          <option value="PEN">Перуанский соль</option>
+          <option value="PHP">Песо Филиппины</option>
+          <option value="PLN">Польский злотый</option>
+          <option value="PYG">Парагвай гуарани</option>
+          <option value="RON">Лей новый Румыния</option>
+          <option value="SAR">Риял Сайдовская Аравия</option>
+          <option value="SEK">Шведская крона</option>
+          <option value="SGD">Сингапурский доллар</option>
+          <option value="THB">Таиландский бат</option>
+          <option value="TRY">Лира Турция</option>
+          <option value="TWD">Тайвань доллар</option>
+          <option value="UAH">Украинская гривна</option>
+          <option value="UYU">Песо Уругвай</option>
+          <option value="UZS">Сум Узбекистан</option>
+          <option value="VND">Вьетнамский донг</option>
+          <option value="ZAR">Рэнд ЮАР</option>
+      </select>
+    </div>
+
+    <div class="swap-rate-container">
+        <div class="rate" id="rate"></div>
+        <button class="btn" id="swap"> <img src="synchronize-50.png" alt="icon" class="synchron"> </button>
+    </div>
+
+    <div class="currency">
+      <input type="number" id="amount-two" placeholder="0">
+
+      <select id="currency-two">
+        <option value="RUB" selected>Рубль</option>
+        <option value="EUR">Евро</option>
+        <option value="USD">Доллар США</option>
+        <option value="AED">Дирхам ОАЭ</option>
+        <option value="AMD">Драм Армения</option>
+        <option value="ARS">Песо Аргентина</option>
+        <option value="AUD">Австралийский доллар</option>
+        <option value="BGN">Лев Болгария</option>
+        <option value="BRL">Реал Бразилия</option>
+        <option value="BSD">Багамский доллар</option>
+        <option value="CAD">Доллар Канада</option>
+        <option value="CHF">Швейцарский франк</option>
+        <option value="CLP">Песо Чили</option>
+        <option value="CNY">Китайский юань</option>
+        <option value="COP">Песо Колумбия</option>
+        <option value="CZK">Крона Чехия</option>
+        <option value="DKK">Датская крона</option>
+        <option value="DOP">Песо Доминиканская республика</option>
+        <option value="EGP">Египетский фунт</option>
+        <option value="FJD">Доллар Фиджи</option>
+        <option value="GBP">Фунт стерлингов</option>
+        <option value="HKD">Гонконгский доллар</option>
+        <option value="HRK">Куна Хорватия</option>
+        <option value="HUF">Венгерский форин</option>
+        <option value="IDR">Рупия Индонезия</option>
+        <option value="ILS">Шекель новый Израиль</option>
+        <option value="INR">Индийская рупия</option>
+        <option value="ISK">Крона Исландия</option>
+        <option value="JPY">Японская иена</option>
+        <option value="KRW">Северно Корейская вона</option>
+        <option value="KZT">Казахская тенге</option>
+        <option value="MXN">Песо Мексика</option>
+        <option value="MYR">Ринггит Малайзия</option>
+        <option value="NOK">Крона Норвегия</option>
+        <option value="NZD">Доллар Новая Зеландия</option>
+        <option value="PAB">Бальбоа Панама</option>
+        <option value="PEN">Перуанский соль</option>
+        <option value="PHP">Песо Филиппины</option>
+        <option value="PLN">Польский злотый</option>
+        <option value="PYG">Парагвай гуарани</option>
+        <option value="RON">Лей новый Румыния</option>
+        <option value="SAR">Риял Сайдовская Аравия</option>
+        <option value="SEK">Шведская крона</option>
+        <option value="SGD">Сингапурский доллар</option>
+        <option value="THB">Таиландский бат</option>
+        <option value="TRY">Лира Турция</option>
+        <option value="TWD">Тайвань доллар</option>
+        <option value="UAH">Украинская гривна</option>
+        <option value="UYU">Песо Уругвай</option>
+        <option value="UZS">Сум Узбекистан</option>
+        <option value="VND">Вьетнамский донг</option>
+        <option value="ZAR">Рэнд ЮАР</option>
+    </select>
+    </div>
+    <div>
+      Данные за  <span class="curently-day"></span>
+    </div>
+  
+  </div>
+</section>
+
+<!-- ======================= -->
+<script src="alien-script.js"></script>
+</body>
+</html>
